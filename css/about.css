@@ -1,0 +1,326 @@
+/*______________________Content______________________*/
+
+.nav {
+	width: 25%;
+}
+
+.img {
+	position: relative;
+	position: relative;
+	overflow: hidden;
+	padding-left: 44px;
+	min-height: 300px;
+	max-height: 30%;
+	width: 50%;
+	background: #5aecff;
+	background: -webkit-linear-gradient(left, #5aecff 0%,#5aecff 79%,#ffffff 79%,#ffffff 79%);
+	background: linear-gradient(to right, #5aecff 0%,#5aecff 79%,#ffffff 79%,#ffffff 79%);
+	-ms-flex-item-align: end;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+}
+.maskImg {
+	position: absolute;
+	top: 0;
+	left: -5%;
+	z-index: 1;
+	width: 105%;
+	height: 100%;
+	background: #fff;
+	-webkit-animation: toBottomMask 333ms ease-out 250ms forwards;
+	animation: toBottomMask 333ms ease-out 250ms forwards;
+}
+.img_1 {
+	display: inline-block;
+	min-height: 295px;
+	max-height: 29.5%;
+	width: 95%;
+	background-image: url(../img/img_1.jpg);
+	background-position: bottom;
+	background-size: 130%;
+	-webkit-transition: 333ms ease-out;
+	transition: 333ms ease-out;
+}
+.img_1:hover {
+	background-position: 50% 30%;
+}
+
+.about {
+	position: relative;
+	overflow: hidden;
+	width: 50%;
+	background: #5AECFF;
+}
+.aboutMask {
+	position: absolute;
+	width: 100%;
+	height: 100%;	
+	background: #fff;
+	-webkit-animation: toTopMask 333ms ease-out 250ms forwards;
+	animation: toTopMask 333ms ease-out 250ms forwards;
+}
+.aboutMaskH2 {
+	position: relative;
+	left: -100%;
+	padding: 66px 0 22px 22px;
+	width: 90%;
+	height: 176px;
+	border-bottom: 22px solid #000;
+	border-left: 66px solid #000;
+	color: #000;
+	font-weight: 700;
+	font-size: 280%;
+	line-height: 100%;
+	-webkit-animation: toRight 333ms ease-out 700ms forwards;
+	animation: toRight 333ms ease-out 700ms forwards;
+}
+.aboutMaskH3 {
+	position: relative;
+	left: -100%;
+	padding: 22px 77px 22px 22px;
+	font-weight: 300;
+	-webkit-animation: toRight 333ms ease-out 800ms forwards;
+	animation: toRight 333ms ease-out 800ms forwards;
+}
+.aboutMaskP {
+	position: relative;
+	left: -100%;
+	padding: 22px 66px 22px 22px;
+	font-weight: 800;
+	font-size: 80%;
+	line-height: 120%;
+	-webkit-animation: toRight 333ms ease-out 900ms forwards;
+	animation: toRight 333ms ease-out 900ms forwards;
+}
+
+.advantages {
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+	min-height: 480px;
+	max-height: 60%;
+	width: 25%;
+	background: #000;
+	color: #5AECFF;
+}
+.advantagesMask {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	-webkit-animation: toRightMask 333ms ease-out 600ms forwards;
+	animation: toRightMask 333ms ease-out 600ms forwards;
+}
+.img_3 {
+	top: 0;
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(../img/img_3.jpg) no-repeat;
+	background-origin: border-box;
+	background-size: 160%;
+	background-position: 0% 100%;
+	-webkit-transition: 333ms ease-out;
+	transition: 333ms ease-out;
+}
+.advantages h3 {
+	padding: 22px;
+	width: 90%;
+	border-bottom: 4px solid #fff;
+	border-left: 22px solid #fff;
+	color: #5AECFF;
+	font-weight: 700;
+	font-size: 110%;
+	line-height: 100%;
+	position: relative;
+	left: -100%;
+	-webkit-animation: toRight 333ms ease-out 800ms forwards;
+	animation: toRight 333ms ease-out 800ms forwards;
+}
+.advantages p {
+	padding: 22px 22px 0 22px;
+	font-weight: 500;
+	font-size: 60%;
+	line-height: 140%;
+	position: relative;
+	width: 100%;
+	left: -100%;
+	-webkit-animation: toRight 333ms ease-out 900ms forwards;
+	animation: toRight 333ms ease-out 900ms forwards;
+}
+
+.offer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-top: 10%;
+	width: 25%;
+	height: 100%;
+	background: #000;
+	color: #fff;
+	overflow: hidden;
+}
+.offerMask {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	-webkit-animation: toLeftMask 333ms ease-out 700ms forwards;
+	animation: toLeftMask 333ms ease-out 700ms forwards;
+}
+.offer h3 {
+	position: relative;
+	padding: 66px 22px 22px 22px;
+	width: 298px;
+	border-bottom: 4px solid #5AECFF;
+	border-left: 22px solid #5AECFF;
+	background: url(../img/img_2.jpg) no-repeat;
+	background-position: bottom;
+	background-size: cover;
+	color: #5AECFF;
+	left: -100%;
+	font-weight: 700;
+	font-size: 110%;
+	line-height: 100%;
+	-webkit-transition: 333ms ease-out;
+	transition: 333ms ease-out;
+	-webkit-animation: toRight 333ms ease-out 1000ms forwards;
+	animation: toRight 333ms ease-out 1000ms forwards;
+}
+.offer h3:hover {
+	background-position: top;
+}
+.offer p {
+	position: relative;
+	left: -100%;
+	padding: 22px;
+	font-size: 60%;
+	line-height: 140%;
+	-webkit-animation: toRight 333ms ease-out 1000ms forwards;
+	animation: toRight 333ms ease-out 1000ms forwards;
+}
+.offer p::-moz-selection {
+	background: #5AECFF;
+	color:#000/* Safari */
+}
+.offer p::selection {
+	background: #5AECFF;
+	color:#000/* Safari */
+}
+.offer ul {
+	padding: 0 0 0 22px;
+	list-style: none;
+	font-size: 60%;
+	position: relative;
+	left: -100%;
+	-webkit-animation: toRight 333ms ease-out 1000ms forwards;
+	animation: toRight 333ms ease-out 1000ms forwards;
+}
+/*____________________Responsitive____________________*/
+
+
+/*_____Tablet____*/
+
+@media (max-width: 1279px) {
+	.nav {
+		width: 40%;
+	}
+	.img {
+		width: 60%;
+	}
+	.img_1:hover {
+	background-position: 50% 30%;
+}
+	.about {
+		width: 60%;
+	}
+	.advantages {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		min-height: 70%;
+		width: 40%;
+	}
+	.img_3 {
+		height: 100%;
+		background-size: cover;
+	}
+	.advantages h3 {
+		padding-top: 10%;
+	}
+	.advantages p {
+		padding-right: 22px;
+	}
+	.offer {
+		position: relative;
+		padding-top: 0;
+		padding-right: 22px;
+		width: 60%;
+	}
+}
+
+
+/*____Mobile____*/
+
+@media (max-width: 960px) {
+	.nav {
+		width: 100%;
+	}
+	.img {
+		width: 100%;
+	}
+	.img_1:hover {
+	background-position: 50% 0%;
+}
+	.about {
+		width: 100%;
+	}
+
+	.about h1 {
+		font-size: 180%;
+	}
+	.advantages {
+		position: relative;
+		-ms-flex-order: 2;
+		overflow: hidden;
+		padding-right: 10%;
+		width: 100%;
+		-webkit-box-ordinal-group: 3;
+		order: 2;;
+	}
+	.img_3 {
+		display: none;
+	}
+	.advantages h3 {
+		width: 100%;
+	}
+	.advantages p {
+		padding-bottom: 22px;
+		width: 100%;
+	}
+	.offer {
+		position: relative;
+		width: 100%;
+	}
+	.offer h3 {
+		width: 100%;
+	}
+	.offer p {
+		width: 100%;
+	}
+}
+@media (max-width: 690px) {
+	.pic {
+		background-size: 180%;
+	}
+}
+@media (max-width: 400px) {
+	.pic {
+		background-size: 230%;
+	}
+}
+
+
