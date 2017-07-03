@@ -311,6 +311,9 @@
 	.offer p {
 		width: 100%;
 	}
+	.aboutMaskH2 {
+		font-size: 160%;
+	}
 }
 @media (max-width: 690px) {
 	.pic {
