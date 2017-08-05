@@ -1,3 +1,32 @@
+
+
+function windowSize(){
+    if ($(window).width() <= '768') {
+        $(".nav").hide();
+    } else {
+        $(".nav").show();
+    }
+	
+	if ($(window).width() <= '640') {
+		$("#slider-mobile").slider({
+    ticks: [0, 100, 200, 300],
+    ticks_positions: [0, 24, 50, 100],
+    ticks_labels: [
+		'Пишу сложный JS с нуля',
+		'Использую готовые решения </br>и умею и переделывать',
+		'Использую готовые </br>решения',
+        'Не владею'       
+    ],
+    ticks_snap_bounds: 40,
+			orientation: 'vertical',
+			reversed: true,
+			range: true,
+			min: 0, max: 3, value: [0, 100]	
+});
+    } else {
+		$("#slider-mobile").slider.destroy;
+	}
+}
 $("#slider").slider({
     ticks: [0, 100, 200, 300],
     ticks_positions: [0, 24, 50, 100],
@@ -7,7 +36,8 @@ $("#slider").slider({
         'Использую готовые решения </br>и умею и переделывать',
         'Пишу сложный JS с нуля'
     ],
-    ticks_snap_bounds: 40
+    ticks_snap_bounds: 40,
+	
 });
 (function () {
     // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
@@ -45,11 +75,7 @@ $("#slider").slider({
         new SelectFx(el);
     });
 })();
-(function () {
-	if ($(window).width() < 768) {
-		$(".nav").hide();
-	} 
-	
+(function () {	
     $('.go_to').click( function () { 
 	var scroll_el = $(this).attr('href'); 
         if ($(scroll_el).length != 0) { 
@@ -66,10 +92,8 @@ $("#slider").slider({
 	
 	$('.mobile__menu').click(function () {
 		$(".nav").slideToggle(300);
-	});	
-	
-	
-	
+	});		
 	
 })();
 
+$(window).on('load resize',windowSize);
