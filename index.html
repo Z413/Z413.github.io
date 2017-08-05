@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>РБавто</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.min.css">
+    <title>Тестовое задание на верстку Знатнов Дмитрий</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="css/slider.css" />
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/responsive.css">    
     <style media="screen">
         html {
             box-sizing: border-box;
         }
-
         *,
         *:before,
         *:after {
@@ -22,102 +22,244 @@
             padding: 0;
             margin: 0;
         }
-
         body {
-            font-family: "open sans", Sans-Serif;
-            font-size: 1.4em;
-            line-height: 1.375em;
+            font-family: 'Roboto', sans-serif;
+            font-size: 62.5%;
+            line-height: 100%;
             padding: 0;
             margin: 0;
             -webkit-font-smoothing: antialiased;
         }
     </style>
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.min.js"></script><![endif]-->
 </head>
 
 <body>
 
-    <main class="wrap row">
-        
-        <header class="nav">
-           	<div class="maskLogo"></div>
-            <h1 class="logo">РБавто</h1>
-            <nav class="menu">
-               <div class="maskActiveLink"></div>
-				<div class="active_link">
-					<a href="#">О компании</a>
-					<div class="maskActiveLink_a"></div> 
+    <!-- layout design -->
+    <div class="pixelPerfect"></div>
+
+    <!-- Navigation -->
+    <div class="mobile__menu">
+		<button class="lines-button x2" type="button" role="button" aria-label="Toggle Navigation">
+			<span class="lines"></span>
+		</button>
+    </div>
+    <div class="nav">
+        <a class="go_to nav__link nav__link_active" href="#personal-info">Личная информация</a>
+        <a class="go_to nav__link" href="#experience">Опыт</a>
+        <a class="go_to nav__link" href="#js">JavaScript</a>
+        <a class="go_to nav__link" href="#about">О себе</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+		<form name="test" method="post" action="#">
+		 <!-- header -->
+        <h1 class="content__header">Анкета</h1>
+		
+        <!-- personal information -->
+        <a id="personal-info"></a> 
+        <div class="content__form personal-info">
+            <!-- icon -->
+            <div class="personal-info__icon"></div>
+
+            <!-- header -->
+            <h2 class="personal-info__header" >Личная информация</h2> 			
+            <!-- form -->			
+			<!-- user name -->
+			<span class="input name">
+			<input class="input__field input__field--name" type="text" id="input-name" />
+			<label class="input__label input__label--name" for="input-name">
+			<span class="input__label-content input__label-content--name">ФИО</span>
+			</label>
+			</span>
+
+			<!-- user year -->
+			<select class="cs-select cs-skin-border year">
+				<option value="" disabled selected>Год рождения</option>
+				<option value="1983">1983</option>
+				<option value="1984">1984</option>
+				<option value="1985">1985</option>
+				<option value="1986">1986</option>
+				<option value="1987">1987</option>
+				<option value="1988">1988</option>
+				<option value="1989">1989</option>
+				<option value="1990">1990</option>
+				<option value="1991">1991</option>
+				<option value="1992">1992</option>
+				<option value="1993">1993</option>
+				<option value="1994">1994</option>
+				<option value="1995">1995</option>
+				<option value="1996">1996</option>
+				<option value="1997">1997</option>
+				<option value="1998">1998</option>
+</select>
+
+			<!-- user sity -->
+			<span class="input city">
+			<input class="input__field input__field--name" type="text" id="input-sity" />
+			<label class="input__label input__label--name" for="input-sity">
+				<span class="input__label-content input__label-content--name">Место проживания</span>
+			</label>
+</span>
+
+			<!-- user skype -->
+			<span class="input skype">
+			<input class="input__field input__field--name" type="text" id="input-skype" />
+			<label class="input__label input__label--name" for="input-skype">
+				<span class="input__label-content input__label-content--name">Skype</span>
+			</label>
+			</span>
+
+			<!-- user email -->
+			<span class="input email">
+			<input class="input__field input__field--name" type="text" id="input-email" />
+			<label class="input__label input__label--name" for="input-email">
+			<span class="input__label-content input__label-content--name">Email</span>
+			</label>
+			</span>
+        </div>
+		
+        <!-- experience -->
+        <a id="experience"></a> 
+        <div class="content__form experience">
+            <!-- icon -->
+            <div class="experience__icon"></div>
+
+            <!-- header -->
+            <h2 class="experience__header">Расскажите о своем опыте</h2> 
+
+            <!-- form -->
+			<div class="experience__form">
+				<div class="experience__form_col1">
+				<div class="BEM">
+					<input id="BEM" type="checkbox" />
+					<label class="checkbox" for="BEM"></label>
+					<label class="checkbox__label" for="BEM">БЭМ/OOCSS</label>
 				</div>
-                <a href="pages/autocolor.html">Подбор автоэмалей</a>
-                <a href="pages/bodywork.html">Кузовные работы</a>
-                <a href="pages/exclusivepainting.html">Эксклюзивная покраска</a>
-                <a href="pages/aerography.html">Аэрография</a>
-                <a href="pages/contact.html">Контакты</a>
-                <div class="maskMenu"></div>
-                <div class="maskNum"></div>
-                <div class="num">0.1</div>
-            </nav>
-        </header>
-		     	
-        <div class="img">
-        	<div class="maskImg"></div>
-        	<span class="img_1"></span>
+
+				<div class="SASS">
+					<input id="SASS" type="checkbox" />
+					<label class="checkbox" for="SASS"></label>
+					<label class="checkbox__label" for="SASS">Stylus/LESS/SASS</label>
+				</div>
+
+				<div class="SVG">
+					<input id="SVG" type="checkbox" />
+					<label class="checkbox" for="SVG"></label>
+					<label class="checkbox__label" for="SVG">Работаю с SVG</label>
+				</div>
+			</div>
+
+				<div class="experience__form_col2">
+				<div class="semantic">
+					<input id="semantic" type="checkbox" />
+					<label class="checkbox" for="semantic"></label>
+					<label class="checkbox__label" for="semantic">Верстаю семантично</label>
+				</div>
+
+				<div class="ES2015">
+					<input id="ES2015" type="checkbox" />
+					<label class="checkbox" for="ES2015"></label>
+					<label class="checkbox__label" for="ES2015">ES2015/ES2016</label>
+				</div>
+
+				<div class="GRUNT">
+					<input id="GRUNT" type="checkbox" />
+					<label class="checkbox" for="GRUNT"></label>
+					<label class="checkbox__label" for="GRUNT">Gulp/GRUNT</label>
+				</div>
+			</div>
+
+				<div class="experience__form_col3">
+				<div class="Webpack">
+					<input id="Webpack" type="checkbox" />
+					<label class="checkbox" for="Webpack"></label>
+					<label class="checkbox__label" for="Webpack">Webpack</label>
+				</div>
+
+				<div class="jQuery">
+					<input id="jQuery" type="checkbox" />
+					<label class="checkbox" for="jQuery"></label>
+					<label class="checkbox__label" for="jQuery">jQuery</label>
+				</div>
+
+				<div class="Git">
+					<input id="Git" type="checkbox" />
+					<label class="checkbox" for="Git"></label>
+					<label class="checkbox__label" for="Git">Ипользую Git</label>
+				</div>
+			</div>
+			</div>                
+        </div>
+		
+        <!-- js -->
+        <a id="js"></a>
+        <div class="content__form js">
+            <!-- icon -->
+            <div class="js__icon"></div>
+
+            <!-- header -->
+            <h2 class="js__header">Уровень владения JavaScript</h2> 
+
+            <!-- form -->           
+        	<input id="slider" data-slider-value="100" data-slider-tooltip="hide" type="range"/>  
+        	<div class="slider__label">
+				<div>Не владею<span>.......</span></div>
+            	<div>Использую готовые <br>решения<span>......</span></div>
+            	<div>Использую готовые решения <br>и умею переделывать<span>.....</span></div>
+            	<div>Пишу сложный JS с нуля<span>...</span></div>
+            </div>          
         </div>
 
-        <section class="about">   
-        	<div class="aboutMask"></div>  
-			<h2 class="aboutMaskH2">О компании</h2>           
-			<h3 class="aboutMaskH3">Компания «РБавто» начала свою деятельность
-в городе Владимир с 2012 г. За этот относительно
-небольшой промежуток времени, мы успели
-привлечь к своей работе высококлассный,
-обученный персонал, обладающий
-внушительным опытом в своих направлениях.</h3>                 
-			<p class="aboutMaskP">Кроме этого, наша компания является официальным представителем компании «АвтоМ» которая занимается продажей расходных материалов и обучением персонала.</p>
-        </section>
+        <!-- about -->
+        <a id="about"></a>
+        <div class="content__form about">
+        	<!-- icon -->
+            <div class="about__icon"></div>
 
-        <section class="advantages">
-            <div class="advantagesMask"></div>
-            <h3>В чем наши преимущества?</h3>
-            <p>Основным нашим преимуществом являются высококлассные специалисты с многолетним опытом работы. Их уровень знаний, позволяет решать самые сложные задачи, которые порой не по силам многим нашим конкурентам.
-                <br>
-                <br>Кроме этого, мы не делаем большую наценку на услуги и расходные материалы, которые предлагаем. В следствии этого наша компания предлагает одни из самых низких цен в городе Владимир, на весть спектр услуг!
-            </p>
-            <div class="img_3"></div>
-        </section>
+            <!-- header -->
+            <h2 class="about__header">Расскажите о себе</h2> 
+			<p class="about__text">Напишите несколько предложений, чем привлекла наша вакансия
+и что вы ожидаете от работы у нас.</p>
 
-        <section class="offer">
-            <div class="offerMask"></div>
-            <h3>Что мы предлагаем?</h3>
-            <p>Наша компания специализируется в следующих направлениях:</p>
-            <ul>
-                <li>- Профессиональный подбор автоэмалей</li>
-                <li>- Кузовные работы</li>
-                <li>- Эксклюзивная покраска</li>
-                <li>- Аэрография</li>
-                <li>- Продажа расходных материалов</li>
-            </ul>
-            <p>На все виды услуг компания «РБавто» предоставляет гарантию, а нашим постоянным клиентам, мы делаем скидки и различные бонусы!
-            </p>
-        </section>
+            <!-- form -->
+			<textarea placeholder="Понравилась тем, что..." class="about__input"></textarea>
+       		<input type="submit" value="Готово" class="submit__form">
+        </div>
+		</form>
+    </div>
+
+    <!-- JS -->   
+    <script src="js/min.jquery.js"></script> 
+    <script src="js/classie.js"></script>
+    <script src="js/selectFx.js"></script>
+    <script src="js/slider.js"></script> 
+    <script src="js/main.js"></script>
     
-    </main>
-
-<!--
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
-    <script src="js/about.js" defer></script>
--->
+<script>
+	var anchor = $('.lines-button');
     
     
-<!--[if lt IE 9]>
-  <script src="js/html5shiv.min.js"></script>
-  <![endif]-->
-    <!--[if lt IE 9]>
-  <script src="js/mediaqueries.min.js"></script>
-  <![endif]-->
-
+      var open = false;
+      anchor.click(function(event){
+        event.preventDefault();
+        if(!open){
+          this.classList.add('close');
+          open = true;
+        }
+        else{
+          this.classList.remove('close');
+          open = false;
+        }
+      });
+   
+  
+	</script>
+      
+        
 </body>
 
 </html>
