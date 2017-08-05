@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="770" viewBox="0 0 14 770">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1c1c1c;
+        fill-rule: evenodd;
+        opacity: 0.1;
+      }
+    </style>
+  </defs>
+  <path id="gray_copy" data-name="gray copy" class="cls-1" d="M-0.012,770H2.993L14.012-.014H-0.012V770Z"/>
+</svg>
