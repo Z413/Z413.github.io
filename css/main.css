@@ -600,6 +600,12 @@ div.cs-active {
 	top: -25px;
 }
 
+#slider-mobile {
+	display: none;
+}
+.slider-vertical {
+	visibility: hidden;
+}
 
 
 
