@@ -42,6 +42,10 @@ h1 {
 	display: none;
 }
 
+.form {
+	margin: auto;
+}
+
 .nav {
 	position: fixed;
 	top: 0;
