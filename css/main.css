@@ -23,10 +23,12 @@ h1 {
 :focus:-ms-input-placeholder {
     color: transparent
 }
+/*
 ::-moz-selection {
     color: #1c1c1c;
     background: #c8c8c8;
 }
+*/
 ::selection {
     color: #1c1c1c;
     background: #c8c8c8;
