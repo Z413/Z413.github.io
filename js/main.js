@@ -120,5 +120,5 @@ $("#slider").slider({
 })();
 
 $(window).load(function(){
-		$('.preloader').delay(1700).fadeOut(300);	
+		$('.preloader').delay(1300).fadeOut(300);	
 });
