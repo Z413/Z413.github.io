@@ -197,7 +197,7 @@ h2 {
 .input__field--name:focus + .input__label--name,
 .input--filled .input__label--name {
     cursor: default;
-    pointer-events: none;
+/*     pointer-events: none; */
 }
 .input__field--name:focus + .input__label--name .input__label-content--name,
 .input--filled .input__label-content--name {
