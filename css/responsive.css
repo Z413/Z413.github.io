@@ -39,8 +39,7 @@
 	    background: transparent;
 	}
 	.lines-button:active {
-	    -webkit-transition: 0;
-	    transition: 0;
+
 	}
 
 	.lines {
