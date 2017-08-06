@@ -36,7 +36,9 @@
 </head>
 
 <body>
-
+	<!-- preloader -->
+	<div class="preloader"></div>
+   
     <!-- layout design -->
     <div class="pixelPerfect"></div>
 
@@ -71,7 +73,7 @@
             <!-- form -->			
 			<!-- user name -->
 			<span class="input name">
-			<input class="input__field input__field--name" type="text" id="input-name" />
+			<input class="input__field input__field--name" type="text" id="input-name" value="Знатнов Дмитрий Владимирович"/>
 			<label class="input__label input__label--name" for="input-name">
 			<span class="input__label-content input__label-content--name">ФИО</span>
 			</label>
@@ -79,10 +81,10 @@
 
 			<!-- user year -->
 			<select class="cs-select cs-skin-border year">
-				<option value="" disabled selected>Год рождения</option>
+				<option value="" disabled >Год рождения</option>
 				<option value="1983">1983</option>
 				<option value="1984">1984</option>
-				<option value="1985">1985</option>
+				<option value="1985" selected>1985</option>
 				<option value="1986">1986</option>
 				<option value="1987">1987</option>
 				<option value="1988">1988</option>
@@ -100,7 +102,7 @@
 
 			<!-- user sity -->
 			<span class="input city">
-			<input class="input__field input__field--name" type="text" id="input-sity" />
+			<input class="input__field input__field--name" type="text" id="input-sity" value="Владимирская обл."/>
 			<label class="input__label input__label--name" for="input-sity">
 				<span class="input__label-content input__label-content--name">Место проживания</span>
 			</label>
@@ -108,7 +110,7 @@
 
 			<!-- user skype -->
 			<span class="input skype">
-			<input class="input__field input__field--name" type="text" id="input-skype" />
+			<input class="input__field input__field--name" type="text" id="input-skype" value="ahmed.zacharovich"/>
 			<label class="input__label input__label--name" for="input-skype">
 				<span class="input__label-content input__label-content--name">Skype</span>
 			</label>
@@ -116,7 +118,7 @@
 
 			<!-- user email -->
 			<span class="input email">
-			<input class="input__field input__field--name" type="text" id="input-email" />
+			<input class="input__field input__field--name" type="text" id="input-email" value="dmitry.znatnov@gmail.com"/>
 			<label class="input__label input__label--name" for="input-email">
 			<span class="input__label-content input__label-content--name">Email</span>
 			</label>
@@ -136,19 +138,19 @@
 			<div class="experience__form">
 				<div class="experience__form_col1">
 				<div class="BEM">
-					<input id="BEM" type="checkbox" />
+					<input id="BEM" type="checkbox" checked/>
 					<label class="checkbox" for="BEM"></label>
 					<label class="checkbox__label" for="BEM">БЭМ/OOCSS</label>
 				</div>
 
 				<div class="SASS">
-					<input id="SASS" type="checkbox" />
+					<input id="SASS" type="checkbox" checked/>
 					<label class="checkbox" for="SASS"></label>
 					<label class="checkbox__label" for="SASS">Stylus/LESS/SASS</label>
 				</div>
 
 				<div class="SVG">
-					<input id="SVG" type="checkbox" />
+					<input id="SVG" type="checkbox" checked/>
 					<label class="checkbox" for="SVG"></label>
 					<label class="checkbox__label" for="SVG">Работаю с SVG</label>
 				</div>
@@ -156,13 +158,13 @@
 
 				<div class="experience__form_col2">
 				<div class="semantic">
-					<input id="semantic" type="checkbox" />
+					<input id="semantic" type="checkbox" checked/>
 					<label class="checkbox" for="semantic"></label>
 					<label class="checkbox__label" for="semantic">Верстаю семантично</label>
 				</div>
 
 				<div class="ES2015">
-					<input id="ES2015" type="checkbox" />
+					<input id="ES2015" type="checkbox" checked/>
 					<label class="checkbox" for="ES2015"></label>
 					<label class="checkbox__label" for="ES2015">ES2015/ES2016</label>
 				</div>
@@ -182,13 +184,13 @@
 				</div>
 
 				<div class="jQuery">
-					<input id="jQuery" type="checkbox" />
+					<input id="jQuery" type="checkbox" checked/>
 					<label class="checkbox" for="jQuery"></label>
 					<label class="checkbox__label" for="jQuery">jQuery</label>
 				</div>
 
 				<div class="Git">
-					<input id="Git" type="checkbox" />
+					<input id="Git" type="checkbox" checked/>
 					<label class="checkbox" for="Git"></label>
 					<label class="checkbox__label" for="Git">Ипользую Git</label>
 				</div>
@@ -228,7 +230,7 @@
 и что вы ожидаете от работы у нас.</p>
 
             <!-- form -->
-			<textarea placeholder="Понравилась тем, что..." class="about__input"></textarea>
+			<textarea placeholder="Понравилась тем, что..." class="about__input" value="Знатнов Дмитрий Владимирович">asdasdasd</textarea>
        		<input type="submit" value="Готово" class="submit__form">
         </div>
 		</form>
@@ -239,28 +241,7 @@
     <script src="js/classie.js"></script>
     <script src="js/selectFx.js"></script>
     <script src="js/slider.js"></script> 
-    <script src="js/main.js"></script>
-    
-<script>
-	var anchor = $('.lines-button');
-    
-    
-      var open = false;
-      anchor.click(function(event){
-        event.preventDefault();
-        if(!open){
-          this.classList.add('close');
-          open = true;
-        }
-        else{
-          this.classList.remove('close');
-          open = false;
-        }
-      });
-   
-  
-	</script>
-      
+    <script src="js/main.js"></script>      
         
 </body>
 
