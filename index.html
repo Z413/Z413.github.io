@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тестовое задание на верстку Знатнов Дмитрий</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link rel="stylesheet" href="css/slider.css">
+    <title>Тестовое задание на front-end разработчика Знатнов Дмитрий</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/rangeslider.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <style media="screen">
         html {
             box-sizing: border-box;
@@ -23,7 +21,7 @@
             margin: 0;
         }
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'proxima_nova_rgregular', sans-serif;
             font-size: 62.5%;
             line-height: 100%;
             padding: 0;
@@ -36,218 +34,467 @@
 </head>
 
 <body>
+    <!-- pixel_perfect -->
+    <div class="pixel_perfect "></div>
     <!-- preloader -->
-    <div class="preloader"></div>
-
-    <!-- layout design -->
-    <div class="pixelPerfect"></div>
-
-    <!-- Navigation -->
-    <div class="mobile__menu">
-        <button class="lines-button x2" type="button" aria-label="Toggle Navigation">
-            <span class="lines"></span>
-        </button>
-    </div>
-    <div class="nav">
-        <a class="go_to nav__link nav__link_active" href="#personal-info">Личная информация</a>
-        <a class="go_to nav__link" href="#experience">Опыт</a>
-        <a class="go_to nav__link" href="#js">JavaScript</a>
-        <a class="go_to nav__link" href="#about">О себе</a>
+    <div class="preloader">
+    		<div id="loader">
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+			</div>
     </div>
 
-    <!-- Content -->
-    <div class="content">
-        <form name="test" method="post" action="#">
-            <!-- header -->
-            <h1 class="content__header">Анкета</h1>
-
-            <!-- personal information -->
-            <a id="personal-info"></a>
-            <div class="content__form personal-info">
-                <!-- icon -->
-                <div class="personal-info__icon"></div>
-
-                <!-- header -->
-                <h2 class="personal-info__header">Личная информация</h2> 
-                
-                <!-- form -->
-                <!-- user name -->
-                <span class="input name">
-					<input class="input__field input__field--name" type="text" id="input-name" value="Знатнов Дмитрий Владимирович"/>
-					<label class="input__label input__label--name" for="input-name">
-						<span class="input__label-content input__label-content--name">ФИО</span>
-					</label>
-                </span>
-
-                <!-- user year -->
-                <select class="cs-select cs-skin-border year">
-                    <option value="" disabled>Год рождения</option>
-                    <option value="1983">1983</option>
-                    <option value="1984">1984</option>
-                    <option value="1985" selected>1985</option>
-                    <option value="1986">1986</option>
-                    <option value="1987">1987</option>
-                    <option value="1988">1988</option>
-                    <option value="1989">1989</option>
-                    <option value="1990">1990</option>
-                    <option value="1991">1991</option>
-                    <option value="1992">1992</option>
-                    <option value="1993">1993</option>
-                    <option value="1994">1994</option>
-                    <option value="1995">1995</option>
-                    <option value="1996">1996</option>
-                    <option value="1997">1997</option>
-                    <option value="1998">1998</option>
-                </select>
-
-                <!-- user sity -->
-                <span class="input city">
-					<input class="input__field input__field--name" type="text" id="input-sity" value="Владимирская обл."/>
-					<label class="input__label input__label--name" for="input-sity">
-						<span class="input__label-content input__label-content--name">Место проживания</span>
-                	</label>
-                </span>
-
-                <!-- user skype -->
-                <span class="input skype">
-					<input class="input__field input__field--name" type="text" id="input-skype" value="ahmed.zacharovich"/>
-					<label class="input__label input__label--name" for="input-skype">
-						<span class="input__label-content input__label-content--name">Skype</span>
-					</label>
-                </span>
-
-                <!-- user email -->
-                <span class="input email">
-					<input class="input__field input__field--name" type="text" id="input-email" value="dmitry.znatnov@gmail.com"/>
-					<label class="input__label input__label--name" for="input-email">
-						<span class="input__label-content input__label-content--name">Email</span>
-					</label>
-                </span>
+    <!-- main -->
+    <main class="container">
+        <header class="header ">
+            <div class="header__illustration">
+                <div class="container">
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                </div>
             </div>
-
-            <!-- experience -->
-            <a id="experience"></a>
-            <div class="content__form experience">
-                <!-- icon -->
-                <div class="experience__icon"></div>
-
-                <!-- header -->
-                <h2 class="experience__header">Расскажите о своем опыте</h2> 
-
-                <!-- form -->
-                <div class="experience__form">
-                    <div class="experience__form_col1">
-                        <div class="BEM">
-                            <input id="BEM" type="checkbox" checked/>
-                            <label class="checkbox" for="BEM"></label>
-                            <label class="checkbox__label" for="BEM">БЭМ/OOCSS</label>
+            <nav class="header__nav_top row">
+                <ul class="col-lg-6">
+                    <li><a href="#">О нас</a>
+                    </li>
+                    <li><a href="#">Хостинг</a>
+                    </li>
+                    <li><a href="#">Услуги</a>
+                    </li>
+                    <li><a href="#">Акции</a>
+                    </li>
+                    <li><a href="#">Новости</a>
+                    </li>
+                    <li><a href="#">Контакты</a>
+                    </li>
+                </ul>
+                <div class="col-lg-6">
+                    <h4><span>8 800</span> 123 45 67</h4>
+                    <p>звонок бесплатный</p>
+                </div>
+                <span class="nav_top_line"></span>
+            </nav>
+            <nav class="header__nav_bottom row">
+                <div class="col-lg-4">
+                    <a href="#" class="nav_bottom_logo">HostWanted</a> 
+                </div>
+                <div class="col-lg-6">
+                    <a href="#" class="nav_bottom_account">Личный кабинет</a> 
+                    <a href="#" class="nav_bottom_support">Техподдержка</a> 
+                </div>
+                <div class="col-lg-2 nav_bottom_lang">         
+                    <a href="#" id="RU_TOP" class="on_lang">RU</a> 
+                    <a href="#" id="EN_TOP">EN</a> 
+                    <span class="on_lang_btn"></span>
+                </div>
+                <span class="nav_bottom_line"></span> 
+            </nav>
+            <h1 class="col-lg-10 col-lg-offset-2 header__h1">VDS/VPS<span>от 479<br><span>руб/мес</span></span></h1>      
+            <p class="col-lg-10 col-lg-offset-2 heder__text">Вы получаете гарантированные вычислительные мощности
+                <br>в Tier-3 дата-центре и полный контроль
+                <br>над своими ресурсами.</p>
+        </header>
+        <section class="sale_plan">
+            <div class="sale_plan__logos row">
+                <h2 class="col-lg-4">OpenStack <br><span>KVM</span></h2>
+                <p class="col-lg-1 ubuntu">Ubuntu</p>
+                <p class="col-lg-1 cent_os">CentOs</p>
+                <p class="col-lg-1 debian">Debian</p>
+                <p class="col-lg-1 linux">Linux</p>
+                <p class="col-lg-1 windows">Windows</p>
+                <p class="col-lg-1 free_bsd">FreeBSD</p>
+                <p class="col-lg-1 bitrix">Bitrix</p>
+                <p class="col-lg-1 vm">Образ VM</p>
+            </div>
+            <span class="sale_plan__nav_line"><span></span></span>
+            <nav class="sale_plan__nav">
+                <p class='tab_plan on_tab'>ТАРИФЫ</p>
+                <p class="tab_config">СВОЯ КОНФИГУРАЦИЯ</p>
+                <span class="tab_arr"></span>
+                <span class="tab_cir"></span>
+            </nav>
+            <div class="sale_plan__body ">
+                <div class="row  sale_plan__body_plan">
+                    <div class="col-lg-6 bumblebee_plans">
+                        <h3>Bumblebee <span>plans</span></h3>
+                        <div class="bumblebee_plans__config">
+                        	<p>
+                        		<span>процессор</span>
+                        		<br>Intel Xeon 2.2 Ghz
+							</p>
+                        	<p>
+                        		<span>жесткий диск</span>
+                        		<br>HDD+SSD
+                        	</p>
                         </div>
-
-                        <div class="SASS">
-                            <input id="SASS" type="checkbox" checked/>
-                            <label class="checkbox" for="SASS"></label>
-                            <label class="checkbox__label" for="SASS">Stylus/LESS/SASS</label>
+                        <div class="bumblebee_plans__option b_01">
+                        	<div class="bumblebee_plans__option_header">
+                        		<div>
+                        		<h4>B</h4>
+                        		<span>01</span>
+                        	</div>
+                        		<div class="option_header_price">
+                        		<h5>129</h5>
+                        		<span>руб/мес</span>
+                        	</div>
                         </div>
-
-                        <div class="SVG">
-                            <input id="SVG" type="checkbox" checked/>
-                            <label class="checkbox" for="SVG"></label>
-                            <label class="checkbox__label" for="SVG">Работаю с SVG</label>
+                        	<div class="bumblebee_plans__option_description">
+                        	<p>ядер процессора
+                        		<span>1</span>
+                        	</p>
+                        	<p>
+оперативная память	
+                       	<span>1 Гб</span>
+                        	</p>
+							<p>
+жесткий диск
+                       	<span>20 Гб</span>
+                        	</p>
+                        </div>	
+                        </div>
+						<div class="bumblebee_plans__option b_02">
+                        	<div class="bumblebee_plans__option_header">
+                        	<div>
+                        		<h4>B</h4>
+                        		<span>02</span>
+                        	</div>
+                        	<div class="option_header_price">
+                        		<h5>219</h5>
+                        		<span>руб/мес</span>
+                        	</div>
+                        </div>
+                        	<div class="bumblebee_plans__option_description">
+                        	<p>ядер процессора
+                        		<span>2</span>
+                        	</p>
+                        	<p>
+оперативная память	
+                       	<span>2 Гб</span>
+                        	</p>
+							<p>
+жесткий диск
+                       	<span>20 Гб</span>
+                        	</p>
+                        </div>	
+                        </div>
+                        <div class="bumblebee_plans__option b_03">
+                        	<div class="bumblebee_plans__option_header">
+                        	<div>
+                        		<h4>B</h4>
+                        		<span>04</span>
+                        	</div>
+                        	<div class="option_header_price">
+                        		<h5>259</h5>
+                        		<span>руб/мес</span>
+                        	</div>
+                        </div>
+                        	<div class="bumblebee_plans__option_description">
+                        	<p>ядер процессора
+                        		<span>1</span>
+                        	</p>
+                        	<p>
+оперативная память	
+                       	<span>1 Гб</span>
+                        	</p>
+							<p>
+жесткий диск
+                       	<span>20 Гб</span>
+                        	</p>
+                        </div>	
                         </div>
                     </div>
-
-                    <div class="experience__form_col2">
-                        <div class="semantic">
-                            <input id="semantic" type="checkbox" checked/>
-                            <label class="checkbox" for="semantic"></label>
-                            <label class="checkbox__label" for="semantic">Верстаю семантично</label>
+                    <div class="col-lg-6 prime_plans">
+                        <h3>Prime <span>plans</span></h3>
+                        <div class="prime_plans__config">
+                        	<p>
+                        		<span>процессор</span>
+                        		<br>Intel Xeon 3.3 Ghz
+							</p>
+                        	<p>
+                        		<span>жесткий диск</span>
+                        		<br>SSD
+                        	</p>
                         </div>
-
-                        <div class="ES2015">
-                            <input id="ES2015" type="checkbox"/>
-                            <label class="checkbox" for="ES2015"></label>
-                            <label class="checkbox__label" for="ES2015">ES2015/ES2016</label>
+                        <div class="prime_plans__option p_01">
+                        	<div class="prime_plans__option_header">
+                        	<div>
+                        		<h4>P</h4>
+                        		<span>02</span>
+                        	</div>
+                        	<div class="option_header_price">
+                        		<h5>129</h5>
+                        		<span>руб/мес</span>
+                        	</div>
                         </div>
-
-                        <div class="GRUNT">
-                            <input id="GRUNT" type="checkbox" />
-                            <label class="checkbox" for="GRUNT"></label>
-                            <label class="checkbox__label" for="GRUNT">Gulp/GRUNT</label>
+                        	<div class="prime_plans__option_description">
+                        	<p>ядер процессора
+                        		<span>2</span>
+                        	</p>
+                        	<p>
+оперативная память	
+                       	<span>4 Гб</span>
+                        	</p>
+							<p>
+жесткий диск
+                       	<span>30 Гб</span>
+                        	</p>
+                        </div>	
                         </div>
-                    </div>
-
-                    <div class="experience__form_col3">
-                        <div class="Webpack">
-                            <input id="Webpack" type="checkbox" />
-                            <label class="checkbox" for="Webpack"></label>
-                            <label class="checkbox__label" for="Webpack">Webpack</label>
+						<div class="prime_plans__option p_02">
+                        	<div class="prime_plans__option_header">
+                        	<div>
+                        		<h4>P</h4>
+                        		<span>04</span>
+                        	</div>
+                        	<div class="option_header_price">
+                        		<h5>219</h5>
+                        		<span>руб/мес</span>
+                        	</div>
                         </div>
-
-                        <div class="jQuery">
-                            <input id="jQuery" type="checkbox" checked/>
-                            <label class="checkbox" for="jQuery"></label>
-                            <label class="checkbox__label" for="jQuery">jQuery</label>
+                        	<div class="prime_plans__option_description">
+                        	<p>ядер процессора
+                        		<span>4</span>
+                        	</p>
+                        	<p>
+оперативная память	
+                       	<span>8 Гб</span>
+                        	</p>
+							<p>
+жесткий диск
+                       	<span>40 Гб</span>
+                        	</p>
+                        </div>	
                         </div>
-
-                        <div class="Git">
-                            <input id="Git" type="checkbox" checked/>
-                            <label class="checkbox" for="Git"></label>
-                            <label class="checkbox__label" for="Git">Ипользую Git</label>
+                        <div class="prime_plans__option p_03">
+                        	<div class="prime_plans__option_header">
+                        	<div>
+                        		<h4>P</h4>
+                        		<span>08</span>
+                        	</div>
+                        	<div class="option_header_price">
+                        		<h5>259</h5>
+                        		<span>руб/мес</span>
+                        	</div>
+                        </div>
+                        	<div class="prime_plans__option_description">
+                        	<p>ядер процессора
+                        		<span>8</span>
+                        	</p>
+                        	<p>
+оперативная память	
+                       	<span>32 Гб</span>
+                        	</p>
+							<p>
+жесткий диск
+                       	<span>80 Гб</span>
+                        	</p>
+                        </div>	
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="row  sale_plan__body_config">
+					<form action="#" class="form_wrap" id="customer_cost">
+						<div class="col-lg-6 server_config">
+							
+							<div class="server_config__body">
+								<div class="config__body_icon"></div>
+								<div class="config__body_header">
+									<h4>ЯДЕР ПРОЦЕССОРА </h4>
+									<p id="output_cpu"></p>
+								</div>
+								<input type="range" name="cpu_slider" min="1" max="4" value="2" step="1" id="cpu_slider">
+								<div class="config__body_radio">
+									<input type="radio" id="xeon2" value="200" name="radio1" checked>
+									<label for="xeon2" class="xeon2"><span></span>Intel Xeon 2.2 Ghz</label>
+ 									<input type="radio" id="xeon3" value="300" name="radio1">
+ 									<label for="xeon3" class="xeon3"><span></span>Intel Xeon 3.3 Ghz</label>
+								</div>
+							</div>
+							
+							<div class="server_config__body ram">
+								<div class="config__body_icon ram_icon"></div>
+								<div class="config__body_header">
+									<h4>ОПЕРАТИВНАЯ ПАМЯТЬ </h4>
+									<p id="output_ram"></p>
+								</div>
+								<input type="range" name="ram_slider" min="1" max="5" value="3" step="1"  id="ram_slider">
+							</div>
+							
+							<div class="server_config__body">
+								<div class="config__body_icon hdd_icon"></div>
+								<div class="config__body_header">
+									<h4>ЖЕСТКИЙ ДИСК</h4>
+									<p id="output_hdd"></p>
+								</div>
+								<input type="range" name="hdd_slider" min="1" max="4" value="2" step="1" id="hdd_slider">
+								<div class="config__body_radio">
+									<input type="radio" id="hdd" value="123" name="radio" checked>
+									<label for="hdd" class="hdd"><span></span>HDD + SSD</label>
+ 									<input type="radio" id="ssd" value="456" name="radio">
+ 									<label for="ssd"><span></span>SSD</label>
+								</div>
+							</div>
 
-            <!-- js -->
-            <a id="js"></a>
-            <div class="content__form js">
-                <!-- icon -->
-                <div class="js__icon"></div>
-
-                <!-- header -->
-                <h2 class="js__header">Уровень владения JavaScript</h2> 
-
-                <!-- form -->
-                <input id="slider" data-slider-value="100" data-slider-tooltip="hide" type="range" />
-                <input id="slider-mobile" data-slider-value="100" data-slider-tooltip="hide" type="range" />
-                <div class="slider__label">
-                    <div>Не владею<span>.......</span>
-                    </div>
-                    <div>Использую готовые
-                        <br>решения<span>......</span>
-                    </div>
-                    <div>Использую готовые решения
-                        <br>и умею переделывать<span>.....</span>
-                    </div>
-                    <div>Пишу сложный JS с нуля<span>...</span>
-                    </div>
+						</div>
+						<div class="col-lg-6 services_check">
+							<h4>ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</h4>
+							<input type="checkbox" name="admin" value="56" id="admin">
+							<label for="admin"><span></span>Администрирование</label>
+							<input type="checkbox" name="panel" value="34" id="panel">
+							<label for="panel"><span></span>Панель управления</label>
+							<input type="checkbox" name="license" value="65" id="license">
+							<label for="license"><span></span>Лицензии</label>
+							<input type="checkbox" name="backup" value="32" id="backup">
+							<label for="backup"><span></span>Дополнительный бэкап</label>
+						</div>
+						<div class="col-lg-5 col-lg-offset-1 summ">
+							<h2 id="sum_calculate">400</h2><span class="summ_span">руб/мес</span>
+						</div>
+						<button type="button" form="customer_cost" class="send_btn col-lg-3 col-lg-offset-1">ЗАКАЗАТЬ</button>
+					</form>
                 </div>
             </div>
-
-            <!-- about -->
-            <a id="about"></a>
-            <div class="content__form about">
-                <!-- icon -->
-                <div class="about__icon"></div>
-
-                <!-- header -->
-                <h2 class="about__header">Расскажите о себе</h2> 
-                <p class="about__text">Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.</p>
-
-                <!-- form -->
-	<textarea placeholder="Понравилась тем, что..." class="about__input">Вакансия мне понравилась тем, что во-первых это удаленная работа - можно сократить время на дорогу, деньги на бензин. Можно сформировать свой график таким образом, чтобы все успевать. Вторая причина - опыт. Я давно верстаю сайты, считаю, что хорошо в этом разбираюсь, но все же из-за отсутствия необходимости не использовал Webpack, Gulp/GRUNT, Git и прочее. Верстаю я давно но не хватает разнообразия в проектах, да и в целом не хватает интересных проектов. От работы я ожидаю интересные проекты и задачи, в том числе, требующие новых для меня знаний во frontend разработке. Адекватную и справедливую заработную плату. И в целом человеческое отношение.</textarea>
-                <input type="submit" value="Готово" class="submit__form">
-            </div>
-        </form>
-    </div>
+       
+        </section>
+        <section class="features">
+        	<h2>Характеристики сервера</h2>
+        	<div class="row">
+        		<div class="col-lg-3 features__ip">
+        			<h4>8 IP-адресов</h4>
+        			<p>по самым низким ценам</p>
+        		</div>
+        		<div class="col-lg-3 features__vm">
+        			<h4>Полный доступ<br>
+к виртуальной машине</h4>
+        			<p>через портал управления</p>
+        		</div>
+        		<div class="col-lg-3 features__custom">
+        			<h4>Кастомизация параметров</h4>
+        			<p>(кол-во ядер процессора,<br>
+объем оперативной памяти,<br>
+объем дискового пространства)</p>
+        		</div>
+        		<div class="col-lg-3 features__data">
+        			<h4>Дата-центр<br>
+на территории РФ</h4>
+        		</div>
+        	</div>
+        </section>
+        <section class="infographic row">
+        	<div class="col-lg-12 infographic__tier3">
+        		<div class="infographic__tier3_img"></div>
+        		<div class="infographic__tier3_num">
+        			<p class="tier3_num_static">01</p>
+        		</div>
+        		<div class="infographic__tier3_text">
+        			<h2>Собственный Tier-3 дата-центр</h2>
+        			<p>высокая надежность электроснабжения –<br>
+два независимых ввода, резервирование, ИБП</p>
+       				<p>продвинутая система вентиляции и кондиционирования</p>
+        		</div>
+        	</div>
+        	<div class="col-lg-12 infographic__net">
+        		<div class="infographic__net_text">
+        			<h2>Сеть</h2>
+        			<p>Инфраструктура сети построена на оборудовании<br>
+<a href="#">Cisco Systems</a> и <a href="#">Juniper Networks</a></p>
+       				<p>Два независимых аплинка</p>
+       				<p>Сеть подключена к большому количеству<br>
+российских пирингов</p>
+        		</div>
+        		<div class="infographic__net_num">
+        			<p class="net_num_static">02</p>
+        		</div>
+        		<div class="infographic__net_img"></div>       		
+        	</div>
+        	<div class="col-lg-12 infographic__equipment">
+        		<div class="infographic__equipment_img"></div>
+        		<div class="infographic__equipment_num">
+        			<p class="equipment_num_static">03</p>
+        		</div>
+        		<div class="infographic__equipment_text">
+        			<h2>Оборудование</h2>
+        			<p>сервера построены на базе таких платформ,<br>
+как <a href="#">SuperMicro</a>, <a href="#">DELL</a>, <a href="#">HP</a>, <a href="#">Intel</a> и <a href="#">Cisco</a></p>
+       				<p>процессоры Intel Xeon, оперативную память<br>
+Kingston ECC</p>
+        		</div>
+        	</div>
+        	<div class="col-lg-12 infographic__data">
+        		<div class="infographic__data_text">
+        			<h2>Хранение данных</h2>
+        			<p>используем большое количество <a href="#">SAS-дисков</a><br>
+<a href="#">HGST</a> и <a href="#">SSD Intel</a></p>
+       				<p>диски собраны в <a href="#">CEPH</a> хранилище<br>
+с <a href="#">RAID</a> зеркалированием</p>
+        		</div>
+        		<div class="infographic__data_num">
+        			<p class="data_num_static">04</p>
+        		</div>
+        		<div class="infographic__data_img"></div>       		
+        	</div>
+        </section>
+        <footer class="footer">
+            <nav class="footer__nav_top row">
+				<ul class="col-lg-6">
+					<li>
+						<ul>
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="#">Облачный хостинг</a></li>
+							<li><a href="#">VDS</a></li>
+							<li><a href="#">Выделенный сервер</a></li>
+						</ul>
+					</li>
+					<li>
+							<ul>
+							<li><a href="#">Администрирование</a></li>
+							<li><a href="#">Установка оборудования</a></li>
+							<li><a href="#">Защита от атак</a></li>
+							<li><a href="#">Расширенная поддержка</a></li>
+							<li><a href="#">Партнерская программа</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="col-lg-3 col-lg-offset-3">
+					<a href="#" class="footer__nav_top_account">N-telecom</a> 
+                    <h4 class="footer__nav_top_phone"><span>8 800</span> 123 45 67</h4>
+                    <p>звонок бесплатный</p>
+                    <a href="#" class="footer__nav_top__support">Техподдержка</a>                    
+				</div>
+            </nav>
+            <nav class="footer__nav_bottom row">
+                   <div class="footer__nav_bottom_lang">
+                    <a href="#" id="RU_BOT" class="on_lang">RU</a> 
+                    <a href="#" id="EN_BOT">EN</a> 
+                    <span class="on_lang_btn_bot"></span>
+                </div>     
+                	<p class="copyright">Hostwanted, 2017. Все права защищены</p>       
+                	<p class="deweloper">разработано в <a href="#">Widestudio</a></p>
+            </nav>
+        </footer>
+    </main>
 
     <!-- JS -->
-    <script src="js/min.jquery.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/selectFx.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/rangeslider.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
     <script src="js/main.js"></script>
-    
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(d, w, c) {
